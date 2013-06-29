@@ -29,6 +29,7 @@ gem 'jbuilder', '~> 1.2'
 
 gem 'simple_form', '~> 3.0.0.rc'
 gem 'haml'
+gem 'will_paginate', '~> 3.0'
 
 group :test, :development do
 	gem 'rspec'

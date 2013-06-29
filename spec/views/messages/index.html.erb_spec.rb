@@ -7,19 +7,15 @@ describe "messages/index" do
         :name => "Name",
         :target_name => "Target Name",
         :target_email => "Target Email",
-        :text => "Thats the simple message",
-        :ip => "Ip",
-        :status => 1
+        :body => "Thats the simple message"
       ),
       stub_model(Message,
         :name => "Name",
         :target_name => "Target Name",
         :target_email => "Target Email",
-        :text => "Thats the simple message",
-        :ip => "Ip",
-        :status => 1
+        :body => "Thats the simple message"
       )
-    ])
+    ]).stub!(:total_pages).and_return(0)
   end
 
   it "renders a list of messages" do

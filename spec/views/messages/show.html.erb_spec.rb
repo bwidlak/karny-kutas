@@ -2,16 +2,6 @@ require 'spec_helper'
 
 describe "messages/show" do
 
-
-  # before(:each) do
-  #   @message = assign(:message, stub_model(Message,
-  #     :name => "Honest John",
-  #     :target_name => "Jenna",
-  #     :target_email => "Target Email",
-  #     :body => "oh thats not cool when you left me"
-  #   ))
-  # end
-
 	it "renders attributes" do
 		assign(:message, stub_model(Message,
 			:name => "Honest John",
