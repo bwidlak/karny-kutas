@@ -20,7 +20,7 @@ describe "messages/new" do
       assert_select "input#message_name[name=?]", "message[name]"
       assert_select "input#message_target_name[name=?]", "message[target_name]"
       assert_select "input#message_target_email[name=?]", "message[target_email]"
-      assert_select "input#message_text[name=?]", "message[text]"
+      assert_select "input#message_body[name=?]", "message[body]"
       assert_select "input#message_ip[name=?]", "message[ip]"
       assert_select "input#message_status[name=?]", "message[status]"
     end
