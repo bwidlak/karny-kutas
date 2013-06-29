@@ -28,9 +28,12 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
 gem 'simple_form', '~> 3.0.0.rc'
+gem 'haml'
 
 group :test, :development do
+	gem 'rspec'
 	gem 'rspec-rails'
+	gem 'webrat'
 end
 
 group :doc do

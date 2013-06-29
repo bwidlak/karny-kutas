@@ -15,20 +15,8 @@ describe MessagesController do
       get("/messages/1").should route_to("messages#show", :id => "1")
     end
 
-    it "routes to #edit" do
-      get("/messages/1/edit").should route_to("messages#edit", :id => "1")
-    end
-
     it "routes to #create" do
       post("/messages").should route_to("messages#create")
-    end
-
-    it "routes to #update" do
-      put("/messages/1").should route_to("messages#update", :id => "1")
-    end
-
-    it "routes to #destroy" do
-      delete("/messages/1").should route_to("messages#destroy", :id => "1")
     end
 
   end

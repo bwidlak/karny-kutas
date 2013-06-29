@@ -22,10 +22,7 @@
         <td><%= message.target_name %></td>
         <td><%= message.target_email %></td>
         <td><%= message.text %></td>
-        <td><%= message.ip %></td>
-        <td><%= message.status %></td>
         <td><%= link_to 'Show', message %></td>
-        <td><%= link_to 'Edit', edit_message_path(message) %></td>
         <td><%= link_to 'Destroy', message, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>

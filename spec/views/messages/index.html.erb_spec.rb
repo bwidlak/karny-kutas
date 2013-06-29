@@ -7,7 +7,7 @@ describe "messages/index" do
         :name => "Name",
         :target_name => "Target Name",
         :target_email => "Target Email",
-        :text => "",
+        :text => "Thats the simple message",
         :ip => "Ip",
         :status => 1
       ),
@@ -15,7 +15,7 @@ describe "messages/index" do
         :name => "Name",
         :target_name => "Target Name",
         :target_email => "Target Email",
-        :text => "",
+        :text => "Thats the simple message",
         :ip => "Ip",
         :status => 1
       )
@@ -28,8 +28,6 @@ describe "messages/index" do
     assert_select "tr>td", :text => "Name".to_s, :count => 2
     assert_select "tr>td", :text => "Target Name".to_s, :count => 2
     assert_select "tr>td", :text => "Target Email".to_s, :count => 2
-    assert_select "tr>td", :text => "".to_s, :count => 2
-    assert_select "tr>td", :text => "Ip".to_s, :count => 2
-    assert_select "tr>td", :text => 1.to_s, :count => 2
+    assert_select "tr>td", :text => "Thats the simple message".to_s, :count => 2
   end
 end

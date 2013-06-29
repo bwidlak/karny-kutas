@@ -1,0 +1,23 @@
+%p#notice= notice
+
+%p
+  %strong
+    Name:
+  = @message.name
+
+%p
+  %strong
+    Target name:
+  = @message.target_name
+
+%p
+  %strong
+    Target email:
+  = @message.target_email
+
+%p
+  %strong
+    Text:
+  = @message.body
+
+= link_to 'Back', messages_path

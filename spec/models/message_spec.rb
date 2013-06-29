@@ -1,5 +1,18 @@
 require 'spec_helper'
 
 describe Message do
-  pending "add some examples to (or delete) #{__FILE__}"
+
+ 	describe '#create' do
+
+ 		message = Message.new
+
+		pending 'should not send the message' do
+			expect(message.first).to eq nil
+		end
+
+	end
+
+
+
+  
 end
