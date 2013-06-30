@@ -1,5 +1,9 @@
 KarnyKutas::Application.routes.draw do
 
+  namespace :admin do
+    resources :messages, only: [:index, :show, :edit, :update, :destroy]
+  end
+
 	resources :messages, only: [:index, :show, :new, :create, :search] do
 		collection do
 			get 'search'

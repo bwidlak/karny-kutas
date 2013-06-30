@@ -1,0 +1,23 @@
+%h1 Listing admin_messages
+
+%table
+	%thead
+		%tr
+			%th Who?
+			%th To whom?
+			%th Body
+			%th
+			%th
+			%th
+
+	%tbody
+		- @admin_messages.each do |admin_message|
+			%tr
+				%td= admin_message.name
+				%td= admin_message.target_email
+				%td= admin_message.body
+				%td= link_to 'Show', admin_message
+				%td= link_to 'Edit', edit_admin_message_path(admin_message)
+				%td= link_to 'Destroy', admin_message, method: :delete, data: { confirm: 'Are you sure?' }
+
+= will_paginate @admin_messages
