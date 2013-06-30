@@ -19,5 +19,8 @@ describe MessagesController do
       post("/messages").should route_to("messages#create")
     end
 
+    it "routes to searched email" do
+      get("/messages/search").should route_to("messages#search")
+    end
   end
 end
