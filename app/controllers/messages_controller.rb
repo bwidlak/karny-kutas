@@ -1,5 +1,10 @@
 class MessagesController < ApplicationController
-	before_action :set_message, only: [:show, :edit, :update, :destroy]
+	before_action :set_message, only: [:show]
+
+	def search
+		@messages = Message.search params[:target_email]
+		redirect_to(new_message_path, notice: 'Theres no messages releated with that email address') if @messages.empty?
+	end
 
 	def index
 		@messages = Message.paginate(:page => params[:page], :per_page => 20)

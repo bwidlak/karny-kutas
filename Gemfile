@@ -35,6 +35,8 @@ group :test, :development do
 	gem 'rspec'
 	gem 'rspec-rails'
 	gem 'webrat'
+
+	gem 'factory_girl_rails', '~> 4.0'
 end
 
 group :doc do
