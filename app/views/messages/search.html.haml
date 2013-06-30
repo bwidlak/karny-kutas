@@ -1,0 +1,23 @@
+%h1 Listing messages
+
+%table
+	%thead
+		%tr
+			%th Name
+			%th Target name
+			%th Target email
+			%th Text
+
+	%tbody
+		- @messages.each do |message|
+			%tr
+				%td= message.name
+				%td= message.target_name
+				%td= message.target_email
+				%td= message.body
+
+%br/
+
+=# will_paginate @messages
+
+= link_to 'New Message', new_message_path

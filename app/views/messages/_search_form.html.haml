@@ -1,0 +1,5 @@
+= form_tag search_messages_path, :method => 'get' do |f|
+  %p
+    = text_field_tag :target_email, params[:target_email]
+    = submit_tag "Search", :name => nil
+  %p
