@@ -1,18 +1,14 @@
 require 'spec_helper'
+require 'factory_girl'
 
 describe Message do
 
- 	describe '#create' do
+ 	describe '#search' do
 
- 		message = Message.new
+		it 'should return messages with that email' do
 
-		pending 'should not send the message' do
-			expect(message.first).to eq nil
 		end
 
 	end
-
-
-
   
 end
