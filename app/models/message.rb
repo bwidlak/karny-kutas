@@ -9,7 +9,17 @@ class Message < ActiveRecord::Base
 	validates_format_of :target_email, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i, :message => 'Wrong email address'
 
 
+	after_create :send_notification
+
+
 	def self.search(target_email)
 		find(:all, :conditions => {:target_email => target_email})
 	end
+
+	private
+
+		def send_notification
+			MessageMailer.notify_recipment(self).deliver
+		end
+		
 end

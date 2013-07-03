@@ -3,10 +3,10 @@ require 'factory_girl'
 
 describe Message do
 
- 	describe '#search' do
+ 	describe '#create message' do
 
-		it 'should return messages with that email' do
-
+		it 'it should send email' do
+			
 		end
 
 	end
