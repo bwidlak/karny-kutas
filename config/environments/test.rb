@@ -35,5 +35,5 @@ KarnyKutas::Application.configure do
   config.active_support.deprecation = :stderr
 
   SITE="http://localhost:3000"
-  
+
 end

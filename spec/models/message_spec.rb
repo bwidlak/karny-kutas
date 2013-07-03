@@ -26,4 +26,15 @@ describe Message do
 	it "should have valid factory" do
 		FactoryGirl.build(:message).should be_valid
 	end
+
+	pending ' #on create message it should send notification' do
+
+		before :each do
+    		@message = FactoryGirl.build(:message)
+  		end
+
+  		it "sends a e-mail" do
+    		last_email.to.should include(@message.target_email)
+  		end
+	end
 end
